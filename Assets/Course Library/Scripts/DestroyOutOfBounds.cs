@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NewBehaviourScript : MonoBehaviour
+public class DestroyOutOfBounds : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -22,6 +22,7 @@ public class NewBehaviourScript : MonoBehaviour
         }
         else if (transform.position.z < lowerBound)
         {
+            Debug.Log("Game Over!");
             Destroy(gameObject);
         }
     }
